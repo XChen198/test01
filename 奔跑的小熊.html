@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奔跑的小熊</title>
+    <style>
+        .box_1 {
+            z-index: 2;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 336px;
+            background: url(media/bg1.png) no-repeat;
+            animation: bg 40s linear infinite;
+
+        }
+
+        .box_2 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 569px;
+            background: url(media/bg2.png) no-repeat;
+            opacity: 0.1;
+            animation: bg 40s linear infinite;
+
+
+        }
+
+        .box_3 {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 384px;
+            background: url(media/bg3.png) no-repeat;
+            opacity: 0.5;
+            animation: bg 40s linear infinite;
+
+
+        }
+
+        .bear {
+            z-index: 3;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            height: 100px;
+            background: url(media/bear.png);
+            opacity: 0.5;
+            animation: bear .7s steps(8) infinite, move 8s forwards 0.2s;
+
+        }
+
+        @keyframes bear {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1600px 0;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+
+        @keyframes bg {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1200px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box_1"></div>
+    <div class="box_2"></div>
+    <div class="box_3"></div>
+    <div class="bear"></div>
+</body>
+
+</html>
